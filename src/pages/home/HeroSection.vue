@@ -28,7 +28,7 @@ const sliderData = [
   },
   {
     title: "КОМПАНИЯ",
-    header: "крупнейший производитель насосного оборудования в китае",
+    header: "ПРИЗНАННЫЙ ЛИДЕР ОТРАСЛИ В КИТАЕ",
     digits: [
       {
         title: "сотрудников",
@@ -42,7 +42,7 @@ const sliderData = [
   },
   {
     title: "НИОКР",
-    header: "крупнейший производитель насосного оборудования в китае",
+    header: "ИННОВАЦИОННЫЕ ТЕХНОЛОГИИ И НАУЧНЫЕ РАЗРАБОТКИ",
     digits: [
       {
         title: "патентов",
@@ -76,6 +76,12 @@ const sliderData = [
             <Transition name="slide-down">
               <h2 v-if="activeSlide === index">{{ item.header }}</h2>
             </Transition>
+          </div>
+          <div
+            v-for="(item, index) in sliderData"
+            class=""
+            :class="{ active: activeSlide === index }"
+          >
             <Transition name="fade">
               <div class="digits">
                 <div

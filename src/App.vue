@@ -6,8 +6,8 @@ import { computed, reactive } from "vue";
 import { useHead } from "@vueuse/head";
 
 const metaData = reactive({
-  title: "KQ",
-  description: "KQ description",
+  title: "KQ Pumps",
+  description: "KQ Pumps description",
 });
 
 useHead({
@@ -22,8 +22,10 @@ useHead({
 </script>
 
 <template>
-  <div class="container text-shade-900 overflow-x-hidden">
-    <Header />
+  <div class="container text-shade-900 relative">
+    <div class="sticky top-0 z-50 bg-white">
+      <Header />
+    </div>
     <router-view></router-view>
     <CallToAction />
     <Footer />

@@ -12,7 +12,7 @@
       <i class="icon-maximize"></i>
     </router-link>
     <div
-      class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 border bg-shade-900 gap-0.5 p-0.5"
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 border bg-shade-900 gap-0.5 p-0.5"
     >
       <div
         class="bg-white aspect-square flex items-center justify-center"
