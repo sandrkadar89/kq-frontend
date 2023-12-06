@@ -21,9 +21,6 @@
         class="bg-shade-900 flex py-10 justify-center items-center grow border border-white"
       >
         <div class="flex flex-col">
-          <a href="mailto:info@kq.com.ru" class="hover:text-secondary"
-            >info@KQ.COM.RU</a
-          >
           <a href="mailto:russia@kaiquan.com.cn" class="hover:text-secondary"
             >russia@kaiquan.com.cn</a
           >
