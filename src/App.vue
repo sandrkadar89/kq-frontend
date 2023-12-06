@@ -22,7 +22,7 @@ useHead({
 </script>
 
 <template>
-  <div class="container text-shade-900">
+  <div class="container text-shade-900 overflow-x-hidden">
     <Header />
     <router-view></router-view>
     <CallToAction />
