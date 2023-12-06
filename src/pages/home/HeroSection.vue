@@ -1,0 +1,122 @@
+script
+<script setup>
+import { onMounted, ref } from "vue";
+const activeSlide = ref(0);
+
+const sliderData = [
+  {
+    title: "ПРОИЗВОДСТВО",
+    header: "крупный производитель насосного оборудования в китае",
+    digits: [
+      {
+        title: "предприятий",
+        number: "7",
+      },
+      {
+        title: "индустриальных зон",
+        number: "5",
+      },
+      {
+        title: "суммарная площадь производства",
+        number: "35000 м²",
+      },
+      {
+        title: "единиц продукции в год",
+        number: ">1000000",
+      },
+    ],
+  },
+  {
+    title: "КОМПАНИЯ",
+    header: "крупный производитель насосного оборудования в китае",
+    digits: [
+      {
+        title: "сотрудников",
+        number: "7000",
+      },
+      {
+        title: "инженеров",
+        number: "1200",
+      },
+    ],
+  },
+  {
+    title: "НИОКР",
+    header: "крупный производитель насосного оборудования в китае",
+    digits: [
+      {
+        title: "патентов",
+        number: "600",
+      },
+      {
+        title: "национальных и отраслевых стандартов",
+        number: "56",
+      },
+    ],
+  },
+];
+</script>
+
+<template>
+  <div class="aspect-video bg-shade-900 flex justify-center items-center">
+    <video-background src="/video/bg.mp4" class="h-full relative">
+      <div
+        class="absolute w-full h-full bg-black bg-opacity-80 2xl:py-[72px] xl:py-14 lg:py-10 md:py-8 py-4 2xl:px-10 xl:px-8 lg:px-6 px-4 text-white"
+      >
+        <div class="slider">
+          <div
+            v-for="(item, index) in sliderData"
+            class="slide"
+            :class="{ active: activeSlide === index }"
+          >
+            <button class="slider-btn" @click="activeSlide = index">
+              <span>0{{ index + 1 }}</span>
+              {{ item.title }}
+            </button>
+            <Transition name="slide-down">
+              <h2 v-if="activeSlide === index">{{ item.header }}</h2>
+            </Transition>
+            <Transition name="fade">
+              <div class="digits">
+                <div
+                  class="digits-item"
+                  v-for="digitItem in item.digits"
+                  v-if="activeSlide === index"
+                >
+                  <h3>{{ digitItem.number }}</h3>
+                  <span>{{ digitItem.title }}</span>
+                </div>
+              </div>
+            </Transition>
+          </div>
+        </div>
+        <div class="absolute bottom-20">
+          <img src="../../assets/images/lines-white.png" alt="" />
+        </div>
+      </div>
+    </video-background>
+  </div>
+</template>
+<style>
+.slide-down-enter-active,
+.slide-down-leave-active {
+  height: auto;
+  max-height: 400px;
+  transition: all 1s ease;
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+  height: 0;
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
