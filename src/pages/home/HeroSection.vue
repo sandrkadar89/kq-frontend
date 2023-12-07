@@ -63,6 +63,13 @@ const sliderData = [
       <div
         class="absolute w-full h-full bg-black bg-opacity-80 2xl:py-[72px] xl:py-14 lg:py-10 md:py-8 py-4 2xl:px-10 xl:px-8 lg:px-6 px-4 text-white"
       >
+        <div class="absolute bottom-10 md:bottom-20 right-20 md:left-0">
+          <img
+            src="../../assets/images/lines-white.png"
+            alt=""
+            class="w-40 md:w-64 lg:w-auto"
+          />
+        </div>
         <div class="slider">
           <div
             v-for="(item, index) in sliderData"
@@ -79,16 +86,12 @@ const sliderData = [
           </div>
           <div
             v-for="(item, index) in sliderData"
-            class=""
+            class="hidden md:block"
             :class="{ active: activeSlide === index }"
           >
             <Transition name="fade">
-              <div class="digits">
-                <div
-                  class="digits-item"
-                  v-for="digitItem in item.digits"
-                  v-if="activeSlide === index"
-                >
+              <div class="digits" v-if="activeSlide === index">
+                <div class="digits-item" v-for="digitItem in item.digits">
                   <h3>{{ digitItem.number }}</h3>
                   <span>{{ digitItem.title }}</span>
                 </div>
@@ -96,18 +99,23 @@ const sliderData = [
             </Transition>
           </div>
         </div>
-        <div class="absolute bottom-20">
-          <img src="../../assets/images/lines-white.png" alt="" />
-        </div>
       </div>
     </video-background>
+  </div>
+  <div v-for="(item, index) in sliderData">
+    <div class="digits-mobile" v-if="activeSlide === index">
+      <div class="digits-item" v-for="digitItem in item.digits">
+        <h3>{{ digitItem.number }}</h3>
+        <span>{{ digitItem.title }}</span>
+      </div>
+    </div>
   </div>
 </template>
 <style>
 .slide-down-enter-active,
 .slide-down-leave-active {
   height: auto;
-  max-height: 400px;
+  max-height: 600px;
   transition: all 1s ease;
 }
 

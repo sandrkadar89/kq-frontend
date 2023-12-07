@@ -1,20 +1,24 @@
 <script setup></script>
 
 <template>
-  <div class="relative">
-    <img src="../../assets/images/call-to-action.jpg" alt="" />
+  <div
+    class="relative bg-cover bg-center"
+    style="background-image: url(/src/assets/images/call-to-action.jpg)"
+  >
     <div
-      class="absolute w-full h-full flex flex-col items-center justify-center top-0 text-white gap-6"
+      class="w-full h-full flex flex-col items-center justify-center top-0 text-white gap-6 py-12 md:py-16 2xl:py-32"
     >
-      <h2 class="font-bold text-3xl lg:text-[40px] uppercase">
+      <h2
+        class="font-bold text-2xl md:text-3xl lg:text-[40px] uppercase text-center"
+      >
         Обсудить сотрудничество
       </h2>
-      <p class="max-w-[586px] text-center text-xl lg:text-2xl">
+      <p class="max-w-[586px] text-center lg:text-xl 2xl:text-2xl">
         Наша продукция присутствует во многих городах РФ, в том числе
         Калининград, Владивосток, Якутск и Севастополь, а также на территории
         Республики Беларусь.
       </p>
-      <button class="btn-large mt-[66px]">связаться с нами</button>
+      <button class="btn-large mt-10 lg:mt-[66px]">связаться с нами</button>
     </div>
   </div>
 </template>

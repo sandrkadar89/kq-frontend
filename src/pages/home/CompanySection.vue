@@ -2,10 +2,14 @@
 
 <template>
   <div class="flex flex-col gap-8 md:gap-12 lg:gap-20 xl:gap-28 3xl:gap-40">
-    <div class="flex justify-between items-center">
-      <img src="/images/home/company-1.jpg" alt="" />
+    <div class="flex justify-between items-center gap-5 flex-col md:flex-row">
+      <img
+        src="/images/home/company-1.jpg"
+        alt=""
+        class="md:w-[360px] lg:w-[480px] xl:w-[550px] 2xl:w-[640px] 3xl:w-[908px]"
+      />
       <div
-        class="grow max-w-[708px] flex flex-col gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-10 3xl:gap-12 x-80"
+        class="grow max-w-[708px] flex flex-col gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-10 3xl:gap-12 x-80 -order-1 md:order-1"
       >
         <router-link class="big-link" to="/about">
           Компания
@@ -20,9 +24,9 @@
         </p>
       </div>
     </div>
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center gap-5 flex-col md:flex-row">
       <div
-        class="grow flex flex-col gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-10 3xl:gap-12 x-80 items-start pl-6 md:pl-8 lg:pl-12 xl:pl-24 2xl:pl-32 3xl:pl-60"
+        class="grow flex flex-col gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-10 3xl:gap-12 x-80 items-start pl-0 md:pl-8 lg:pl-12 xl:pl-24 2xl:pl-32 3xl:pl-60"
       >
         <p class="text-lg xl:text-xl 3xl:text-2xl uppercase max-w-[597px]">
           Компания владеет

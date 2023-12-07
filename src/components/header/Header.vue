@@ -16,7 +16,9 @@ const toggleMenu = () => (showMenu.value = !showMenu.value);
 </script>
 
 <template>
-  <div class="flex px-3 md:px-4 lg:px-6 3xl:px-10 relative">
+  <div
+    class="flex px-3 md:px-4 lg:px-6 3xl:px-10 relative border-b border-shade-900"
+  >
     <Logo />
     <CatalogButton />
     <SearchButton @toggle="toggleSearch" />

@@ -25,32 +25,29 @@
     @apply fill-current;
   }
   .header-menu {
-    @apply ml-4 md:ml-6 lg:ml-8 3xl:ml-10 gap-6 md:gap-8 lg:gap-10 3xl:gap-14 flex items-center mr-auto flex-col 2xl:flex-row;
+    @apply ml-0 xl:ml-8 3xl:ml-10 gap-3 md:gap-4 lg:gap-4 3xl:gap-14 flex xl:items-center mr-auto flex-col 2xl:flex-row py-4 xl:py-0 items-start;
   }
   .header-menu a {
     @apply font-bold uppercase transition-colors hover:text-primary;
   }
   .header-phones {
-    @apply 2xl:border-l 2xl:border-r border-shade-900 flex flex-col gap-1 justify-center items-start font-bold px-2 md:px-4 xl:px-6 3xl:px-10;
+    @apply 2xl:border-l 2xl:border-r border-shade-900 flex flex-col gap-1 justify-center items-start font-bold px-4 xl:px-6 3xl:px-10;
   }
   .header-menu-container {
     @apply absolute 2xl:relative hidden 2xl:flex grow bg-white p-4 2xl:p-0 top-full z-40;
   }
   .header-menu-container.open {
-    @apply flex flex-col 2xl:flex-row gap-4 2xl:gap-0 w-auto right-0;
+    @apply flex flex-col items-start 2xl:flex-row gap-4 2xl:gap-0 w-auto right-0;
   }
 
   .slider {
     @apply relative w-full h-full flex flex-col gap-4 xl:gap-8;
   }
-  .slider .digits {
-    @apply absolute bottom-0 right-0 flex;
-  }
   .slider-btn {
-    @apply text-2xl flex gap-2 font-bold uppercase;
+    @apply text-sm mb-2 md:text-lg lg:text-2xl flex gap-2 font-bold uppercase;
   }
   .slider-btn span {
-    @apply text-base;
+    @apply text-xs md:text-base;
   }
 
   .active .slider-btn {
@@ -68,23 +65,67 @@
     @apply overflow-hidden;
   }
   .slide h2 {
-    @apply text-5xl md:text-6xl lg:text-7xl 2xl:text-[96px] uppercase font-bold leading-[1.15em] md:leading-[1.15em] lg:leading-[1.15em] xl:leading-[1.15em] 2xl:leading-[1.15em] max-w-[80%];
+    @apply text-lg sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 3xl:text-[96px] uppercase font-bold leading-[1.15em] md:leading-[1.15em] lg:leading-[1.15em] xl:leading-[1.15em] 2xl:leading-[1.15em] max-w-[80%];
   }
-  .slider .digits .digits-item {
-    @apply flex p-3 md:p-4 lg:p-4 xl:p-4 3xl:p-10 border-white border border-r-0 last:border-r flex-col gap-2;
+  .digits {
+    @apply absolute bottom-5 right-4 hidden xl:flex max-w-[540px] xl:max-w-full md:grid md:grid-cols-2;
   }
-  .slider .digits .digits-item h3 {
-    @apply text-4xl md:text-5xl lg:text-6xl 2xl:text-[64px] font-bold text-secondary;
+  .digits::before {
+    @apply -translate-y-8 absolute text-right lg:text-left w-full;
+    content: "МЫ В ЦИФРАХ";
   }
-  .slider .digits .digits-item span {
-    @apply text-lg lg:text-xl font-medium;
+  .digits-item {
+    @apply flex p-3 md:p-3 lg:p-3 xl:p-4 3xl:p-10 border-white border xl:border-r-0 xl:last:border-r flex-col gap-0;
+  }
+  .digits-item h3 {
+    @apply text-3xl md:text-3xl lg:text-5xl 2xl:text-[64px] font-bold text-secondary;
+  }
+  .digits-item span {
+    @apply text-base lg:text-xl font-medium;
+  }
+
+  .digits-mobile {
+    @apply md:hidden relative my-16 grid grid-cols-1 md:grid-cols-2 mx-10;
+  }
+  .digits-mobile::before {
+    @apply -translate-y-10 translate-x-4 absolute;
+    content: "МЫ В ЦИФРАХ";
+  }
+  .digits-mobile .digits-item {
+    @apply border border-shade-900;
   }
 
   .big-link {
-    @apply 3xl:text-[80px] 2xl:text-6xl xl:text-5xl lg:text-4xl text-3xl font-bold uppercase flex gap-3 lg:gap-4 xl:gap-5 3xl:gap-6 hover:text-primary;
+    @apply 3xl:text-[80px] 2xl:text-6xl xl:text-5xl lg:text-4xl text-3xl font-bold uppercase inline-flex gap-3 lg:gap-4 xl:gap-5 3xl:gap-6 hover:text-primary;
   }
   .big-link i {
     @apply text-primary text-[40px];
+  }
+
+  .news-header {
+    @apply flex justify-between md:items-center flex-col md:flex-row gap-6;
+  }
+  .news-filter {
+    @apply flex gap-6;
+  }
+  .news-filter button {
+    @apply text-lg lg:text-xl 2xl:text-2xl font-bold text-shade-200 flex;
+  }
+  .news-filter button span {
+    @apply text-xs;
+  }
+  .news-filter button.active {
+    @apply text-shade-900;
+  }
+  .news-buttons {
+    @apply flex gap-2 items-center;
+  }
+  .news-buttons button {
+    @apply flex w-10 lg:w-14 3xl:w-20 h-10 lg:h-14 3xl:h-20 border border-shade-900 text-shade-900 hover:bg-shade-900 hover:text-shade-100 rounded-full
+    items-center justify-center text-2xl;
+  }
+  .news-buttons a {
+    @apply font-bold text-primary ml-4 2xl:text-2xl;
   }
 }
 

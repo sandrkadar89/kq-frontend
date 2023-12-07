@@ -3,7 +3,7 @@
 <template>
   <div class="bg-shade-900 text-white">
     <div
-      class="flex text-2xl xl:text-[40px] leading-[40px] xl:leading-[55px] uppercase"
+      class="flex text-base md:text-lg xl:text-2xl xl:text-[40px] leading-[40px] xl:leading-[55px] uppercase flex-col lg:flex-row"
     >
       <div
         class="flex py-10 justify-center items-center grow border-y border-white"
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div
-        class="bg-shade-900 flex py-10 justify-center items-center grow border border-white"
+        class="bg-shade-900 flex py-10 justify-center items-center grow border-y lg:border border-white"
       >
         <div class="flex flex-col">
           <a href="mailto:russia@kaiquan.com.cn" class="hover:text-secondary"

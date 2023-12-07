@@ -5,7 +5,7 @@
     <img
       src="../../assets/images/lines-black.png"
       alt=""
-      class="absolute right-0 -top-10"
+      class="absolute right-0 lg:-top-10 max-w-[30%]"
     />
     <router-link class="big-link" to="/about">
       клиенты
