@@ -45,7 +45,7 @@ const close = () => {
       <img
         :src="item.image"
         alt=""
-        class="3xl:max-w-[900px] 2xl:max-w-[750px] xl:max-w-[640px] lg:max-w-[480px] -order-1"
+        class="3xl:max-w-[900px] 2xl:max-w-[750px] xl:max-w-[640px] lg:max-w-[480px] -order-1 rounded xl:rounded-lg"
         :class="{
           'lg:order-1': index % 2 === 0,
         }"
