@@ -37,8 +37,8 @@
         </h4>
       </div>
     </div>
-    <div>
-      <router-link to="/" class="btn-large mt-10 mx-auto flex">
+    <div class="flex justify-center">
+      <router-link to="/" class="btn-large mt-10 mx-auto">
         смотреть все продукты
       </router-link>
     </div>
