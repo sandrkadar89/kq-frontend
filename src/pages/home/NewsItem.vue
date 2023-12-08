@@ -4,7 +4,7 @@ defineProps(["item"]);
 </script>
 
 <template>
-  <li class="glide__slide">
+  <li class="glide__slide news-item">
     <img :src="item.image" alt="" />
     <div class="date">
       {{ item.date.format("DD.MM.YY") }}
@@ -28,13 +28,13 @@ defineProps(["item"]);
 .glide__slide p {
   @apply text-sm lg:text-base uppercase font-medium text-shade-300 hidden;
 }
-.glide__slide.glide__slide--active {
+.glide__slide.news-item.glide__slide--active {
   @apply mr-10 2xl:mr-20 !important;
 }
 .glide__slide img {
   @apply w-full object-cover h-[400px];
 }
-.glide__slide.glide__slide--active img {
+.glide__slide.news-item.glide__slide--active img {
   @apply h-[480px];
 }
 @media (max-width: 640px) {
@@ -53,7 +53,7 @@ defineProps(["item"]);
     @apply h-[320px];
   }
 }
-.glide__slide.glide__slide--active p {
+.glide__slide.news-item.glide__slide--active p {
   @apply block;
 }
 </style>

@@ -1,10 +1,10 @@
 <script setup>
-import { useHead } from "@vueuse/head";
 import HeroSection from "./HeroSection.vue";
 import CompanySection from "./CompanySection.vue";
 import ProductsSection from "./ProductsSection.vue";
 import ClientsSection from "./ClientsSection.vue";
 import NewsSection from "./NewsSection.vue";
+import { useHead } from "@vueuse/head";
 
 useHead({
   title: "KQ Pumps :: Главная",

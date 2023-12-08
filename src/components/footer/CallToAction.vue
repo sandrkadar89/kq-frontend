@@ -6,7 +6,7 @@ const router = useRouter();
 const show = ref(false);
 
 router.afterEach(() => {
-  if (router.currentRoute.value.path) {
+  if (router.currentRoute.value.path === "/contact") {
     show.value = false;
   } else {
     show.value = true;

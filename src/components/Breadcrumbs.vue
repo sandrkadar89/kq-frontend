@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+defineProps(["current"]);
+</script>
 
 <template>
   <div
@@ -6,6 +8,6 @@
   >
     <router-link to="/"> Главная </router-link>
     <i class="icon-right text-[10px]"></i>
-    <router-link to="/" class="text-primary"> Контакты </router-link>
+    <a href="!#" class="text-primary"> {{ current }} </a>
   </div>
 </template>

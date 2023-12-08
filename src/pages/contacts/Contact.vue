@@ -2,11 +2,22 @@
 import Map from "./Map.vue";
 import Feedback from "./Feedback.vue";
 import Breadcrumbs from "../../components/Breadcrumbs.vue";
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "KQ Pumps :: Контакты",
+  meta: [
+    {
+      name: `description`,
+      content: "this is contact page",
+    },
+  ],
+});
 </script>
 
 <template>
   <div class="2xl:px-10 xl:px-8 lg:px-6 px-4">
-    <Breadcrumbs />
+    <Breadcrumbs current="Контакты" />
 
     <h1>Контакты</h1>
     <div class="flex flex-col lg:flex-row gap-4 xl:gap-6">
@@ -93,7 +104,7 @@ import Breadcrumbs from "../../components/Breadcrumbs.vue";
         </ul>
       </div>
       <div
-        class="hidden lg:flex grow lg:basis-1/2 bg-cover bg-center"
+        class="hidden lg:flex grow lg:basis-1/2 bg-cover bg-center rounded xl:rounded-lg"
         style="background-image: url(/images/contact/img1.jpg)"
       ></div>
     </div>
