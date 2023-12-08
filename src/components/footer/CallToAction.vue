@@ -1,7 +1,22 @@
-<script setup></script>
+<script setup>
+import { useRouter } from "vue-router";
+import { ref } from "vue";
+
+const router = useRouter();
+const show = ref(false);
+
+router.afterEach(() => {
+  if (router.currentRoute.value.path) {
+    show.value = false;
+  } else {
+    show.value = true;
+  }
+});
+</script>
 
 <template>
   <div
+    v-if="show"
     class="relative bg-cover bg-center"
     style="background-image: url(/src/assets/images/call-to-action.jpg)"
   >

@@ -15,6 +15,16 @@
 }
 
 @layer components {
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[80px] uppercase font-bold mt-4 mb-4 xl:mb-8 3xl:mb-12;
+  }
+  h2 {
+    @apply text-xl md:text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-[40px] uppercase font-bold mt-4 mb-4 xl:mb-8 3xl:mb-12 flex gap-4 lg:gap-6 2xl:gap-10 items-center;
+  }
+  h2.line::after {
+    @apply block w-14 lg:w-20 2xl:w-[100px] h-1 bg-primary;
+    content: "";
+  }
   .btn {
     @apply inline-flex px-4 py-3 md:px-6 md:py-4 xl:px-10 xl:py-6 border border-primary rounded-[4px] items-center justify-center bg-transparent transition-colors hover:bg-primary text-primary hover:text-white font-bold uppercase tracking-[0.008rem] text-sm lg:text-base leading-none;
   }
@@ -126,6 +136,45 @@
   }
   .news-buttons a {
     @apply font-bold text-primary ml-4 2xl:text-2xl;
+  }
+
+  .requisites {
+    @apply flex flex-col gap-3 md:gap-4 lg:gap-5 xl:gap-6 3xl:gap-8 text-shade-300 uppercase;
+  }
+  .requisites li {
+    @apply flex flex-col xl:flex-row justify-between xl:gap-10 2xl:gap-16 3xl:gap-28;
+  }
+  .requisites li span {
+    @apply xl:w-[200px];
+  }
+  .requisites li p {
+    @apply text-shade-900 grow;
+  }
+
+  .form-control {
+    @apply flex flex-col gap-2 lg:gap-3 2xl:gap-4 font-medium uppercase;
+  }
+  .form-control label {
+    @apply text-sm xl:text-base;
+  }
+  .form-control input,
+  .form-control textarea {
+    @apply outline-none bg-white text-shade-900 rounded xl:rounded-lg border border-white transition-colors hover:border-shade-900 focus:border-shade-900 text-lg p-4 lg:p-6 xl:py-7 3xl:py-8;
+  }
+  .form-control span {
+    @apply text-error invisible;
+  }
+  .form-control.required label::after {
+    content: "*";
+  }
+  .form-control.error label {
+    @apply text-error;
+  }
+  .form-control.error input {
+    @apply border-error;
+  }
+  .form-control.error span {
+    @apply visible;
   }
 }
 
