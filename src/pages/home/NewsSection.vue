@@ -1,5 +1,6 @@
 <script setup>
-import "vue3-carousel/dist/carousel.css";
+defineProps(["title"]);
+
 import NewsItem from "./NewsItem.vue";
 import { newsData } from "./newsDummyData";
 import { onMounted, ref, watch } from "vue";
@@ -7,7 +8,7 @@ import { RouterLink } from "vue-router";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 
-const glide = new Glide(".glide", {
+const glide1 = new Glide(".glide1", {
   focusAt: 0,
   gap: 24,
   perView: 3,
@@ -23,7 +24,7 @@ const glide = new Glide(".glide", {
 });
 
 onMounted(() => {
-  glide.mount();
+  glide1.mount();
 });
 
 const activeSlide = ref(0);
@@ -43,7 +44,7 @@ watch(activeSlide, (newSlide, oldSlide) => {
   // let i = newSlide;
   // if (i < 0) i = 0;
   // if (i > newsData.length - 1) i = newsData.length - 1;
-  glide.update({
+  glide1.update({
     startAt: newSlide,
   });
 });
@@ -51,8 +52,8 @@ watch(activeSlide, (newSlide, oldSlide) => {
 
 <template>
   <div class="flex flex-col gap-6 md:gap-8 lg:gap-10 xl:gap-12 mt-10 relative">
-    <router-link class="big-link mb-6 lg:mb-8 xl:mb-10 3xl:mb-12" to="/about">
-      Новости
+    <router-link class="big-link mb-6 lg:mb-8 xl:mb-10 3xl:mb-12" to="/news">
+      {{ title || "Новости" }}
       <i class="icon-maximize"></i>
     </router-link>
     <div class="news-header">
@@ -74,7 +75,7 @@ watch(activeSlide, (newSlide, oldSlide) => {
         <RouterLink to="/news">ВСЕ НОВОСТИ</RouterLink>
       </div>
     </div>
-    <div class="glide">
+    <div class="glide1">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           <NewsItem v-for="item in newsData" :item="item" />
