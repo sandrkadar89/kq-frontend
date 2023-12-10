@@ -11,11 +11,13 @@ const open = (value, i) => {
   modalContent.value = value;
   modalIndex.value = i;
   modal.value = true;
+  document.body.style.overflowY = "hidden";
 };
 const close = () => {
   modalContent.value = null;
   modalIndex.value = 0;
   modal.value = false;
+  document.body.style.overflowY = "auto";
 };
 </script>
 
