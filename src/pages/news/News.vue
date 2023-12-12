@@ -44,16 +44,13 @@ router.afterEach(() => {
       >
         <div class="news-types 3xl:grow 3xl:w-80 3xl:shrink-0">
           <button :class="{ active: activeType === 0 }" @click="activeType = 0">
-            ВСЕ НОВОСТИ
+            ВСЕ
           </button>
           <button :class="{ active: activeType === 1 }" @click="activeType = 1">
             НОВОСТИ
           </button>
           <button :class="{ active: activeType === 2 }" @click="activeType = 2">
-            СТАТЬИ
-          </button>
-          <button :class="{ active: activeType === 3 }" @click="activeType = 3">
-            ВИДЕО
+            ПУБЛИКАЦИИ
           </button>
         </div>
         <div>
