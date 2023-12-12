@@ -10,7 +10,7 @@ export const newsData = [
   },
   {
     title:
-      "Более 40 миллионов юаней! Kaiquan выиграл тендер на третий проект метро Чэнду",
+      "Церемония открытия представительства компании Kaiquan в России",
     image: "/images/news/post2.jpg",
     date: moment(),
     category: "article",
