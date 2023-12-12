@@ -52,6 +52,9 @@ router.afterEach(() => {
           <button :class="{ active: activeType === 2 }" @click="activeType = 2">
             ПУБЛИКАЦИИ
           </button>
+          <button :class="{ active: activeType === 3 }" @click="activeType = 2">
+            ВИДЕО
+          </button>
         </div>
         <div>
           <div
