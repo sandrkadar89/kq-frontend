@@ -62,12 +62,14 @@ router.afterEach(() => {
           >
             <NewsItem v-for="(item, index) in newsData" :item="item" />
           </div>
+          /*
           <Pagination
             :key="$route.path"
             :current="activePage"
             :total="10"
             :changePage="changePage"
           />
+          */
         </div>
       </div>
     </div>
